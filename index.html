@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="_assets/css/video-online.css">
+    <link rel="shortcut icon" href="_assets/img/ony-2.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <nav>
+        <ul id="menu">
+            <li><a class="home" href="#">Home</a></li>
+            <li><a class="gifmaker" href="#" title="Make animated GIF from still frames or edit frame order and duration of existing GIF">GIF Maker</a></li>
+            <li class="active"><a class="video" href="#" title="Video to GIF converter">Video to GIF</a></li>
+            <li><a class="resize" href="#" title="Resize animated image">Resize</a></li>
+            <li><a class="crop" href="#" title="Crop selection of image">Crop</a></li>
+            <li><a class="optimize" href="#" title="Reduce animation size">GIF Optimizer</a></li>
+            <li><a class="effects" href="#" title="Add effects to images and animations">Effects &raquo;</a>
+                <ul>
+                    <li><a href="#" title="Apply instant color filters">Color filters</a></li>
+                    <li><a href="#" title="Reverse GIF animation">Reverse GIF</a></li>
+                    <li><a href="#" title="Rotate GIF">Rotate GIF</a></li>
+                    <li><a href="#" title="Change animation speed">Adjust speed</a></li>
+                    <li><a href="#" title="Place image on the gif">Add overlay</a></li>
+                    <li><a href="#" title="Cut duration of GIF animation">Cut duration</a></li>
+                    <li><a href="#" title="Combine GIFs to put them side by side">Side by side</a></li>
+                    <li><a href="#" title="Censor sensitive parts of image">Censor GIF</a></li>
+                </ul>
+            </li>
+            <li><a class="split" href="#" title="Split GIF image to frames">Split</a></li>
+            <li><a class="add-text" href="#" title="Write text over GIF image">Add text</a></li>
+            <li><a class="webp" href="#" title="Animated WebP maker and tools">WebP</a></li>
+            <li><a class="apng" href="#" title="Animated PNG (APNG) maker and tools">APNG</a></li>
+        </ul>
+    </nav>
+    <div class="c"></div>
+    <div id="submenu"><img src="_assets/img/video-logo.png" alt="Video tools" title="Video tools" id="sub-logo" width="22" height="22" />
+        <ul>
+            <li><a href="#">Video to GIF</a></li>
+            <li><a href="#">GIF to MP4</a></li>
+            <li><a href="#">Rotate video</a></li>
+            <li><a href="#">Resize video</a></li>
+            <li><a href="#">Reverse</a></li>
+            <li><a href="#">Cut video</a></li>
+            <li class="active"><a href="#">Crop video</a></li>
+            <li><a href="#">Video speed</a></li>
+            <li><a href="#">Mute</a></li>
+            <li><a href="#">Video to JPG</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="mt-4">
+            <!-- Audio -->
+            <h1>Audio</h1>
+            <div>
+                <audio id="audio" src="_assets/audio/Ardia Diwang Probowati - Sumamburat Bang Bang Wetan.mp3" controls autoplay loop></audio>
+            </div>
+            <!-- set volume -->
+            <script>
+                var mp3 = document.getElementById("audio");
+                mp3.volume = 0.1;
+            </script>
+
+            <!-- Video -->
+            <div class="row" style="text-align:center">
+                <h1>Video</h1>
+                <div>
+                    <video src="_assets/video/Ardia Diwang Probowati - Sumamburat Bang Bang Wetan.mp4" width="100%" type="video/mp4" controls></video>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <video src="https://static.clideo.com/media/slow-motion-index.av1.mp4" width="100%" type="video/mp4" controls></video>
+                        </div>
+                        <div class="col-md-6">
+                            <video src="https://static.clideo.com/media/loop-video.av1.mp4" width="100%" type="video/mp4" controls></video>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h1>YouTube - Controls</h1>
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"></iframe>
+                        </div>
+                        <div class="col-md-4">
+                            <h1>YouTube - Loop</h1>
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"></iframe>
+                        </div>
+                        <div class="col-md-4">
+                            <h1>YouTube - Autoplay + Muted</h1>
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
+                        </div>
+                    </div>
+
+                    <div>
+                        <video id="video1" width="100%">
+                      <source src="https://static.clideo.com/media/loop-video.av1.mp4" type="video/mp4">
+                      <source src="https://static.clideo.com/media/loop-video.av1.mp4" type="video/ogg">
+                      Browser Anda tidak mendukung video HTML.
+                    </video>
+                        <br>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                            <button class="btn btn-outline-secondary" onclick="playPause()">Play/Pause</button>
+                            <button class="btn btn-outline-secondary" onclick="makeBig()">Besar</button>
+                            <button class="btn btn-outline-secondary" onclick="makeSmall()">Kecil</button>
+                            <button class="btn btn-outline-secondary" onclick="makeNormal()">Normal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div>
+                <div class="footer-menu-row">
+                    <ul>
+                        <li><strong>Ezgif resources</strong></li>
+                        <li><a href="#">Help / FAQ</a></li>
+                        <li><a href="#">About and contacts</a></li>
+                        <li><a href="#">Privacy and Cookies</a></li>
+                        <li><a href="#">Search ezgif.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu-row">
+                    <ul>
+                        <li><strong>Video tools</strong></li>
+                        <li><a href="#">GIF to MP4 converter</a></li>
+                        <li><a href="#">Online video cutter</a></li>
+                        <li><a href="#">Video reverser</a></li>
+                        <li><a href="#">Video rotator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu-row">
+                    <ul>
+                        <li><strong>Popular file converters</strong></li>
+                        <li><a href="#" title="Convert PDF to GIF (animated or sequence)">PDF to GIF converter</a></li>
+                        <li><a href="#" title="Convert PDF document to sequence of PNG images">PDF to PNG converter</a></li>
+                        <li><a href="#" title="Convert PNG images to JPG">PNG to JPG converter</a></li>
+                        <li><a href="#" title="Convert WebP images to JPG">WebP to JPG converter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu-row last">
+                    <ul>
+                        <li><strong>Other image tools</strong></li>
+                        <li><a href="#" title="Convert image files to DataURI code">Image to Data URI</a></li>
+                        <li><a href="#" title="Generate barcode images from input text">Barcode generator</a></li>
+                        <li><a href="#" title="Animated MNG maker">MNG tools</a></li>
+                        <li><a href="#" title="Animated FLIF maker">FLIF tools</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </footer>
+
+        <!-- script -->
+        <script>
+            var myVideo = document.getElementById("video1");
+
+            function playPause() {
+                if (myVideo.paused)
+                    myVideo.play();
+                else
+                    myVideo.pause();
+            }
+
+            function makeBig() {
+                myVideo.width = 560;
+            }
+
+            function makeSmall() {
+                myVideo.width = 320;
+            }
+
+            function makeNormal() {
+                myVideo.width = 420;
+            }
+        </script>
+</body>
+
+</html>
