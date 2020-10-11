@@ -1024,7 +1024,7 @@
             <!-- set volume -->
             <script>
                 var mp3 = document.getElementById("audio");
-                mp3.volume = 0.5;
+                mp3.volume = 0.1;
             </script>
 
             <!-- Video -->
@@ -1039,7 +1039,7 @@
                             <video src="https://static.clideo.com/media/slow-motion-index.av1.mp4" width="100%" type="video/mp4" controls></video>
                         </div>
                         <div class="col-md-6">
-                            <video src="https://static.clideo.com/media/reverse-video.av1.mp4" width="100%" type="video/mp4" controls></video>
+                            <video src="https://static.clideo.com/media/loop-video.av1.mp4" width="100%" type="video/mp4" controls></video>
                         </div>
                     </div>
 
@@ -1048,16 +1048,16 @@
                 <div>
                     <div class="row">
                         <div class="col-md-4">
-                            <!-- <h1>YouTube - Controls</h1> -->
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/OzHHjg_RJGw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <h1>YouTube - Controls</h1>
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/ESpE1RFhGQo?controls=0"></iframe>
                         </div>
                         <div class="col-md-4">
-                            <!-- <h1>YouTube - Loop</h1> -->
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ESpE1RFhGQo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <h1>YouTube - Loop</h1>
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/OzHHjg_RJGw?loop=1"></iframe>
                         </div>
                         <div class="col-md-4">
-                            <!-- <h1>YouTube - Autoplay + Muted</h1> -->
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/gTVcIE6bgdQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <h1>YouTube - Autoplay + Muted</h1>
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/gTVcIE6bgdQ?autoplay=1&mute=0"></iframe>
                         </div>
                     </div>
 
@@ -1075,30 +1075,6 @@
                             <button class="btn btn-outline-secondary" onclick="makeNormal()">Normal</button>
                         </div>
                     </div>
-                    <!-- script video -->
-                    <script>
-                        var myVideo = document.getElementById("video1");
-
-                        function playPause() {
-                            if (myVideo.paused)
-                                myVideo.play();
-                            else
-                                myVideo.pause();
-                        }
-
-                        function makeBig() {
-                            myVideo.width = 560;
-                        }
-
-                        function makeSmall() {
-                            myVideo.width = 320;
-                        }
-
-                        function makeNormal() {
-                            myVideo.width = 420;
-                        }
-                    </script>
-
                 </div>
             </div>
         </div>
@@ -1145,6 +1121,29 @@
             </div>
         </footer>
 
+        <!-- script -->
+        <script>
+            var myVideo = document.getElementById("video1");
+
+            function playPause() {
+                if (myVideo.paused)
+                    myVideo.play();
+                else
+                    myVideo.pause();
+            }
+
+            function makeBig() {
+                myVideo.width = 560;
+            }
+
+            function makeSmall() {
+                myVideo.width = 320;
+            }
+
+            function makeNormal() {
+                myVideo.width = 420;
+            }
+        </script>
 </body>
 
 </html>
