@@ -1024,7 +1024,7 @@
             <!-- set volume -->
             <script>
                 var mp3 = document.getElementById("audio");
-                mp3.volume = 0.1;
+                mp3.volume = 0.5;
             </script>
 
             <!-- Video -->
@@ -1075,6 +1075,30 @@
                             <button class="btn btn-outline-secondary" onclick="makeNormal()">Normal</button>
                         </div>
                     </div>
+                    <!-- script video -->
+                    <script>
+                        var myVideo = document.getElementById("video1");
+
+                        function playPause() {
+                            if (myVideo.paused)
+                                myVideo.play();
+                            else
+                                myVideo.pause();
+                        }
+
+                        function makeBig() {
+                            myVideo.width = 560;
+                        }
+
+                        function makeSmall() {
+                            myVideo.width = 320;
+                        }
+
+                        function makeNormal() {
+                            myVideo.width = 420;
+                        }
+                    </script>
+
                 </div>
             </div>
         </div>
@@ -1121,29 +1145,6 @@
             </div>
         </footer>
 
-        <!-- script -->
-        <script>
-            var myVideo = document.getElementById("video1");
-
-            function playPause() {
-                if (myVideo.paused)
-                    myVideo.play();
-                else
-                    myVideo.pause();
-            }
-
-            function makeBig() {
-                myVideo.width = 560;
-            }
-
-            function makeSmall() {
-                myVideo.width = 320;
-            }
-
-            function makeNormal() {
-                myVideo.width = 420;
-            }
-        </script>
 </body>
 
 </html>
